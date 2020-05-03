@@ -1,0 +1,228 @@
+:root {
+  --blue: #5555c6;
+  --orange-light: #feae6e;
+  --orange: #fe5a72;
+  --min-width: 1200px;
+}
+
+html, body, .wrap {
+  height: 100%;
+}
+
+body, div, ul, li, input {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--min-width);
+  background-color: #cecece;
+}
+
+body, input {
+  color: #fff;
+}
+
+input {
+  border: 0;
+  background-color: transparent;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+}
+
+.wrap {
+  display: flex;
+  min-width: 700px;
+  min-height: 600px;
+  margin: 200px 100px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.info_section {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 15px 30px 30px;
+}
+
+.todo_section {
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 30px 30px 30px 15px;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  display: block;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 20px;
+}
+
+/* name */
+.name_area {
+  display: inline-flex;
+  align-items: flex-end;
+  position: relative;
+  padding: 30px 10px 20px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.thumbnail {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: url(img/sally.png) no-repeat 50%/cover;
+  vertical-align: top;
+}
+
+.name_area .text_area {
+  display: flex;
+  align-items: center;
+  margin: 0 10px 10px;
+  padding: 0 5px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.name_area .text {
+  margin-right: 5px;
+}
+
+.name_area .name_wrap {
+  display: inline-block;
+  border-radius: 12px;
+  padding: 0 10px;
+  background-image: linear-gradient(40deg, var(--orange-light) 0, var(--orange) 100%);
+  vertical-align: top;
+}
+
+.name_area .form .input_name {
+  width: 100%;
+  font-size: 20px;
+}
+
+/* clock */
+.clock_area {
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.clock_area .icon {
+  display: inline-block;
+  width: 39px;
+  height: 39px;
+  background-image: url(img/icon_clock.svg);
+  vertical-align: top;
+  line-height: 39px;
+}
+
+.clock_area .time {
+  line-height: 39px;
+  font-weight: normal;
+}
+
+/* weather */
+.weather_area {
+  flex: 1 0 auto;
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.weather_area .temp {
+  display: block;
+}
+
+/* todo */
+.todo_area .title {
+  margin-top: 50px;
+}
+
+.todo_item {
+  font-size: 18px;
+  line-height: 33px;
+}
+
+.todo_item:hover {
+  text-decoration: underline;
+}
+
+.todo_item:before {
+  content: '☑️';
+  margin-right: 3px;
+}
+
+.button_delete {
+  cursor: pointer;
+  font-size: 22px;
+  border: 0;
+  background-color: transparent;
+}
+
+.todo_wrap {
+  display: block;
+  border-radius: 12px;
+  padding: 9px 20px;
+  background-image: linear-gradient(40deg, var(--orange-light) 0, var(--orange) 100%);
+}
+
+.input_todo {
+  width: 100%;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+
+/* bg */
+.background_box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  min-width: var(--min-width);
+  height: 100%;
+}
+
+.background {
+  object-fit: cover;
+  width: 100%;
+  min-width: var(--min-width);
+  height: 100%;
+  margin: auto;
+  animation: fadeIn 0.3s ease-in-out;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vanilla JS Challenge</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="info_section">
+      <!-- name -->
+      <div class="name_area">
+        <span class="thumbnail"></span>
+        <div class="text_area">
+          <span class="text">Hello!</span>
+          <form class="form">
+            <span class="name_wrap">
+              <input type="text" class="input_name" placeholder="What's your name?">
+            </span>
+          </form>
+          <div class="print_name"></div>
+        </div>
+      </div>
+      
+      <!-- clock -->
+      <div class="clock_area">
+        <strong class="title">Clock</strong>
+        <span class="icon"></span>
+        <strong class="time"></strong>
+      </div>
+      
+      <!-- weather -->
+      <div class="weather_area">
+        <strong class="title">Weather</strong>
+        <span class="temp"></span>
+        <span class="place"></span>
+      </div>
+    </div>
+    <div class="todo_section">
+      <div class="todo_area">
+        <form class="form">
+          <span class="todo_wrap">
+            <input type="text" class="input_todo" placeholder="Write something to do">
+          </span>
+        </form>
+        <strong class="title">Todo List ✏️</strong>
+        <ul class="todo_list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="./clock.js"></script>
+  <script src="./username.js"></script>
+  <script src="./todo.js"></script>
+  <script src="./background.js"></script>
+  <script src="./weather.js"></script>
+</body>
+</html>
